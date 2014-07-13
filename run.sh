@@ -15,4 +15,4 @@ sleep 5
 
 SHIPIP=`docker inspect shipyard | grep IPAddress | perl -ne 'if( /(\d+\.\d+\.\d+\.\d+)/ ) { print $1; }'`
 
-docker run -d --name shipagent -v /var/run/docker.sock:/docker.sock -e IP=127.0.0.1 -e URL=http://${SHIPIP}:8000 -p 4500:4500 shipyard/agent
+docker run -d --name shipagent -v /var/run/docker.sock:/docker.sock -e IP=127.0.0.1 -e URL=http://${SHIPIP}:8000 -p 127.0.1.1:4500:4500 shipyard/agent

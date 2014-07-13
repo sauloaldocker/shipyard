@@ -1,2 +1,4 @@
 data/
-build/.git
+data2/
+build/.git/
+shipyard-agent
