@@ -8,7 +8,7 @@
 #cd auto
   #docker build -t sauloal/shipyardauto .
 
-SRC=$HOME/data/shipyard
+SRC=$HOME/data/docker/shipyard
 
 docker run --privileged --name shipyard -d -v $SRC:/var/lib/docker -p 127.0.1.1:8000:8000 sauloal/shipyardauto
 #-p 127.0.1.1:4500:4500
